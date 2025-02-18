@@ -1,0 +1,195 @@
+﻿<html>
+<head>
+    <title>Actividad CSS y HTML</title>
+    <style>
+        /*Prueba de color y personalizacion*/
+
+        h1{
+            text-align: center;
+            color: darkblue;
+        }
+
+        h3{
+            text-align: center;
+            background-color: orangered;
+        }
+        header{
+            color: red;
+            background-color: antiquewhite;
+            text-align: center;
+        }
+
+        body{
+            background-color: papayawhip;
+        }
+        
+        .PreguntasHtml1{
+            background-color: violet;
+            color: green;
+            text-align: right;
+            writing-mode: vertical-rl;
+        }
+
+        .PreguntasHtml2{
+            background-color: limegreen;
+            color: whitesmoke;
+            width: 300px;
+        }
+        
+        .BasicTags{
+            background-color: lightcoral;
+            color: purple;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .listas{
+            background-color: navajowhite;
+            color: blue;
+        }
+        .PreguntasCSS{
+            background-color: yellow;
+            color: darkgreen;
+        }
+
+        .basicCSS{
+            background-color: black;
+            color: antiquewhite;
+            width: 400 px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <header>José Yael Varela Garcia A01645324 </header>
+    
+    <h1>Preguntas HTML y CSS</h1>
+
+    
+    <div class="PreguntasHtml1">
+        <h2>¿Qué es HTML?</h2>
+        <p>HTML es un lenguaje de marcado que da estructura a la información contenida dentro de una página web</p>
+    </div>
+
+    <div class="PreguntasHtml2"">
+        <h2>Explica las etiquetas de head y body.</h2>
+        <p>La etiqueta body es aquella que se usa para estructurar el contenido principal de la página web, es decir, la información que se desea hacer visible en la página web, como texto, imágenes o enlaces. Mientras que la etiqueta head sirve para estructurar la información de la página, pero que no se verá visible para el usuario, como podrían ser el título de la pestaña, enlaces de estilo CSS, etc.</p>
+    </div>
+
+    <div class="BasicTags"">
+        <h2>Explica las etiquetas section, article, aside, header y footer.</h2>
+        <p>Section: Representa una sección de contenido relacionado, es decir, que corresponde a un mismo tipo de tema</p>
+        <p>Article: Representa una seccion especifica de contenido independiente, es decir, un articulo</p>
+        <p>Aside: Representa una sección de información que tiene relación al contenido principal de la página web pero que se puede separar, es decir, son fragmentos de información que complementan la información principal.</p>
+        <p>Header: Es la primera sección de información que ven los usuarios en la parte superior de la página, es decir, se utiliza esta etiqueta para mostrar el encabezado. </p>
+        <p>Footer: Es la etiqueta que simboliza el pie de página, es decir, la sección de contenido que se ubica en la parte inferior de la página web.</p>
+    </div>
+
+    <div class="listas">
+        <h2>Creación de listas desordenadas y ordenadas</h2>
+        <h3>Lista desordenada</h3>
+        <ul>
+            <li>Carne</li>
+            <li style="font-size: larger; color: red">Verduras</li>
+            <li>Agua fresca</li>
+        </ul>
+
+        <h3>Lista ordenada</h3>
+        <ol>
+            <li>Servir el cereal</li>
+            <li>Vertir la leche</li>
+            <li>Comer</li>
+        </ol>
+    </div>
+
+    <div>
+        <h2>Tablas</h2>
+        <table border="1">
+            <tr>
+                <td>Equipo</td>
+                <td>Jugador</td>
+            </tr>
+            <tr>
+                <td>Manchester United</td>
+                <td style="font-size: small; background-color: blueviolet;">Harry Maguire</td>
+            </tr>
+            <tr>
+                <td style="height: 200px;">Chivas</td>
+                <td>Alan Pulido</td>
+            </tr>
+        </table>
+    </div>
+
+    <h1>CSS</h1>
+
+    <div>
+        <h2 style="color: royalblue; font-size: large;">¿Qué es CSS?</h2>
+        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: green;">CSS (Cascading Style Sheets) se trata de un lenguaje de diseño gráfico el cual permite personalizar una página web, permitiendo crear hojas de estilo con el cual controlar la apariencia de una pagina, como el color, la alineación del contenido, el tipo de letra y su tamaño, etc.</p>
+    </div>
+
+    <div class="PreguntasCSS">
+        <h2 style="text-align: right; color:darkkhaki">¿Cuál es su proposito?</h2>
+        <p>Su proposito es el de añadir estilos y personalización a una página web. Separando la información de la presentación visual con la cual fácilitar el mantenimiento y la legibilidad del desarrollo de la página.</p>
+    
+        <h2>¿Como aplicas CSS a HTML (3 opciones)?</h2>
+        <p style="font: 300;"> Mediante el uso de la etiqueta style de forma separada en head.</p>
+        <p style="color: yellowgreen; text-align: right;">Mediante la etiqueta style pero en la linea que se desea personalizar. Utilizando style dentro del inicio de la etiqueta de parrafo (p) o titulo.</pp>
+        <p>Mediante un archivo separado .css y se enlaza al head del documento html mediante la etiqueta link</p>
+        
+        <h2 style="font-size: small;"> ¿Qué es un selector y que es una regla CSS? </h2>
+        <p>Un selector son aquellos que delimitan o seleccionan el o los elementos del contenido de la página a los cuales aplicar estilos.</p>
+        <p style="border: 3cm; color: blueviolet; font-size: small;">Una regla CSS son las declaraciones que consisten de un selector con el cual seleccionan el contenido a editar y un bloque de propiedades y valores con las cuales se cambiaran el contenido, por ejemplo el color o el tamaño de la letra.</p>
+    
+    </div>
+
+    <div class="basicCSS">
+        <h2>Explica los selectores: Tag selector, Class Selector, Tag and Class Selector, Id Selector</h2>
+        <p>Tag Selector: Selecciona los elementos por su etiqueta, por ejemplo p{} selecciona los elementos dentro de <p> (todos los parrafo) </p>
+        <p>Class Selector: Selecciona todos los elementos que pertenezcan a una clase, utilizando un punto (.) antes del nombre de la clase, ejemplo, .nombreDeClase{} </p>
+        <p>Tag and Class Selector: Combina el Tag Selector y el Class Selector, donde selecciona elementos especificos, por ejemplo, si usaramos el ejemplo de <p> (todos los parrafos) al usar p.clase{} solo se seleccionarian los parrafos p con la clase seleccionada </p>
+        <p> Id Selector: Se selecciona el elemento por su atributo que funge como su identificador, esto se utiliza usando el simbolo "#". #id{} </p>
+    </div>
+
+    <div style="background-color: azure;">
+        <h2>¿Qué es una clase y id? ¿Cómo se relacionan con CSS? </h2>
+        <p style="color: red">Una clase es un nombre seleccionado de manera arbitraria que guardara un estilo personalizado y que se aplicara a un conjunto de contenido deseado, es decir, a multiples elementos.</p>
+        <p style="text-align: right; width: 200px;">El Id es un atributo que se asigna a un solo elemento y es seleccionado mediante el simbolo #, esto con el fin de crear un identificador único para dicho elemento.</p>
+        <p>Las clases y los id se relacionan a CSS en sentido de que permiten aplicarle estilos personalizados a los elementos HTML que se seleccionen mediante el uso de clases y id.</p>
+        <h2 style ="text-align: center;">Explica el CSS Box Model y muestra un ejemplo</h2>
+        <p style="color: lime; text-align: right;">Es una caja que rodea cada elemento que se encuentre dentro de el, similar a un margen visible. Esto forma una estructura de elementos donde se incluye el contenido, el espacio entre el contenido y el borde, el borde y el margen que funge como un espacio fuera del borde que determina la distancia entre el bloque y otros elementos.</p>
+        <h2 style="width: 200px; padding: 150px; border: 5px solid blue; margin: 100px ">Box Model</h2>
+    </div>
+
+    <div style="position: relative;; width: 100%; background-color: hotpink;">
+        <h2 style="position: absolute; right: 0; top: 0;; padding: 10px;">
+            ¿Cómo puedes cambiar el color de la fuente con CSS?
+        </h2>
+        <p style="color: saddlebrown; width: 30%;">Esto se puede hacer usando la propiedad "Color: -el nombre del color que se desee-" la cual permite seleccionar colores mediante su nombre (como Red, Yellow, Lime, etc.) o mediante el uso de sus valores RGB, hexadecimales y HSL.</p>
+    </div>
+       
+    <div style="background-color: wheat;">
+        <h2>Referencias</h2>
+        <ul>
+            <li>W3Schools.com. (n.d.). <a href="https://www.w3schools.com/TAgs/tag_section.asp" target="_blank">https://www.w3schools.com/TAgs/tag_section.asp</a></li>
+            <li>GeeksforGeeks. (2024, December 3). HTML tags A to Z list. GeeksforGeeks. <a href="https://www.geeksforgeeks.org/html-tags-a-to-z-list/" target="_blank">https://www.geeksforgeeks.org/html-tags-a-to-z-list/</a></li>
+            <li>Etiqueta Aside en HTML ¿Qué es y cómo funciona? (con Ejemplo) - YouTube. (2024). Youtube.com. <a href="https://www.youtube.com/watch?v=5emrRVPqB7w&t=104s" target="_blank">https://www.youtube.com/watch?v=5emrRVPqB7w&t=104s</a></li>
+            <li>BlackeyeB. (2023, March 25). Lista HTML: Cómo usar viñetas, listas ordenadas y desordenadas. FreeCodeCamp.org. <a href="https://www.freecodecamp.org/espanol/news/lista-html-como-usar-vinetas-listas-ordenadas-y-desordenadas/" target="_blank">https://www.freecodecamp.org/espanol/news/lista-html-como-usar-vinetas-listas-ordenadas-y-desordenadas/</a></li>
+            <li>¿Qué es CSS? bien explicado - YouTube. (2024). Youtube.com. <a href="https://www.youtube.com/watch?v=8cSo0ijtkzU" target="_blank">https://www.youtube.com/watch?v=8cSo0ijtkzU</a></li>
+            <li>3. Clases CSS - Tutorial de CSS - Picuino. (2025). Picuino.com. <a href="https://www.picuino.com/es/css-clases.html" target="_blank">https://www.picuino.com/es/css-clases.html</a></li>
+        </ul>
+    <div>
+
+
+    <p>
+        <a href = "wikileaks2.html"> Pagina con CSS de WikiLeaks </a>
+    </p>
+
+
+</body>
+
+
+
+</html>
