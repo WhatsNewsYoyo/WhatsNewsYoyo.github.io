@@ -1,0 +1,137 @@
+﻿<html>
+
+
+<head>
+    <style>
+        .azul{
+            color:blue;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .rojo{
+            color:red;
+            text-align: center;
+            background-color: lightseagreen;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+
+<h1 class="azul">¡Pruebas de JS!</h1>
+<h2>Hi</h2>
+
+
+
+</body>
+
+
+<script src="js/spotify.js"></script>
+
+<script>
+    let x=10;
+
+    //Mostrar en consola
+    console.log(x);
+    //Funciona igual para strings.
+    console.log("Move");
+    //Creación de un diccionario.
+    let p={
+        "titulo": "llano en llamas", "autor": "Juan Rulfo"
+    };
+
+    console.log(p.autor);
+
+    //Como declarar una función
+    function triplicar(a){
+        return 3*a;
+    }
+    //Esto es lo mismo a este tipo de funciones arrows
+    
+    /*const triplicar = (a) => {return 3*a};*/
+
+    //Mostrar
+    console.log(triplicar(3));
+
+    let h=document.getElementsByTagName("h2")
+    console.log(h);
+
+    let f=document.getElementsByClassName("azul");
+    console.log(f)
+
+    // Crear un nuevo párrafo
+    //CreateElement basicamente crea un h1, p, h2, etc.
+    let parrafo = document.createElement("p");
+
+    //Crea el texto. Tambien se puede con textContent
+    let text = document.createTextNode("Nuevo parrafo creado usando Js");
+    
+    //appendChild basicamente concatena y pega las cosas.
+    parrafo.appendChild(text);
+
+
+    // Ahora se añade al body
+    document.body.appendChild(parrafo);
+
+    //Si fuera buscar por Id
+    document.getElementById("encabezado");
+
+
+    let h1 = document.querySelector("h1"); 
+    h1.setAttribute("class", "rojo")
+
+    //Boton usando Js
+    let button = document.createElement("button");
+    let textButton = document.createTextNode("Color");
+    button.appendChild(textButton);
+    document.body.appendChild(button);
+
+    button.addEventListener("click", function() {h1.classList.toggle("azul"); h1.classList.toggle("rojo")});
+
+
+
+    async function VeAlMuseo(){
+        let respuesta = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects/437245"); 4
+        console.log(respuesta);
+        let respuestaJSON = await respuesta.json();
+        console.log(respuestaJSON);
+        console.log(respuestaJSON.artistAlphaSort);
+
+
+        //Para mostrar el dato extraido del JSON en el HTML
+        let pruebaJSON = document.createElement("p");
+        let textoJSON = document.createTextNode(respuestaJSON.artistAlphaSort);
+        pruebaJSON.appendChild(textoJSON);
+        document.body.appendChild(pruebaJSON);
+    
+        //Para imagen
+        let imagenJSON = document.createElement("img");
+        imagenJSON.src ="https://images.metmuseum.org/CRDImages/ep/original/LC-52_63_2-3.jpg"; //Asignar del URL
+        imagenJSON.style.width = "200px";
+        imagenJSON.style.height = "300px";
+
+
+        document.body.appendChild(imagenJSON);
+    }
+
+    let button_museum = document.createElement("button");
+    let textButton_museum = document.createTextNode("Museo");
+    button_museum.appendChild(textButton_museum);
+    document.body.appendChild(button_museum);
+    button_museum.addEventListener("click", function(){VeAlMuseo()});
+  
+
+</script>
+
+
+
+
+
+
+</html>

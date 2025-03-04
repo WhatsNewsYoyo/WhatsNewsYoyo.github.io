@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="./css/css-pokemon-gameboy.css">
+    <style>
+
+        .fondo{
+            background-color: rgb(219, 124, 140);
+        }
+
+        .nombre{
+            font-size: smaller;
+            color: black;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .titulo{
+            color: cornsilk;
+            text-align: center;
+
+        }
+
+        .framed.primary{
+            background-color: purple;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .introduccion{
+            color: peru;
+            text-align: center;
+        }
+
+        .respuesta{
+            text-align: justify;;
+        }
+        .message{
+            color: bisque;
+        }
+
+        .framed.secondary{
+            font-size: 12px;
+            background-color: #ff6fa9;
+            
+
+        }
+
+        #pasos{
+            color: white;
+            background-color: #ffd0cc;
+            
+        }
+
+        .lista li{
+            padding-bottom: 20px;
+            text-align: justify;;
+            font-size: 10px;
+        }
+
+        #endpoints{
+            background-color: rgb(157, 18, 157);
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+            object-fit:cover;
+            border-radius: 10px;
+
+        }   
+
+        #imageContainer{
+            display: flex;
+            justify-content: center;
+        }
+
+        button{
+            color: gold;;
+        }
+
+        button:hover{
+            color: red;
+        }
+
+        .button-container{
+            display: flex;
+            justify-content: center;
+            gap:20px;
+        }
+
+    </style>
+</head>
+
+<body class="fondo">
+    <h3 class="nombre"> José Yael Varela García</h3>
+    <h1 class="titulo""> Actividad 8: Cats API </h1>
+
+    <section class = "framed primary">
+        <h3 class="introduccion"">¿Qué API se esta utilizando?</h3>
+        <p class="respuesta"> Utilizando la API "Cataas" es posible el poder obtener una coleccion de imagenes y gifs sobre este animal al cual seleccione porqué es lindo.</p>
+        <div id="githubHint">
+            <div class="framed">
+                <p class="message">Para acceder al GitHub</p>
+                <p>
+                <a href="https://github.com/public-apis/public-apis?tab=readme-ov-file#animals"
+                    target="_new"
+                    class="button">Go to GitHub</a>
+                </p>
+
+                <p class="message">Para acceder a su web</p>
+                <p>
+                <a href="https://cataas.com/"
+                    target="_new"
+                    class="button">Go to Cataas</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="framed secondary">
+        <h3 style="text-align: center; color: #00b7cc;"> Tutorial </h3>
+            <div id="pasos"  class="framed">
+                <ol class="lista">
+                    <li>El primer paso es obtener la URL de la API al dar clic en el botón "Go to Github" en esta página.</li>
+                    <li>Después se deberá crear un archivo JavaScript donde se manejará la lógica de la API.</li>
+                    <li>Dentro del archivo JavaScript elige un endpoint para obtener una imagen o un dato.</li>
+                    <li>Programa una función para obtener tu endpoint deseado, utilizando "fetch" el cual por defecto utiliza el método GET. </li>
+                    <li>Configura la función para procesar la respuesta utilizando blob ya que el formato de esta api no devuelve un JSON, y, extrae los datos necesarios (como imágenes o gifs).</li>
+                    <li>Muestra los datos obtenidos en tu página HTML, insertándolos en los elementos correspondientes.</li>
+                </ol>
+            </div>
+
+            <h3 style="text-align: center; color: #00b7cc;"> endpoints </h3>
+            <div id = "endpoints" class="framed">
+                <ol class="lista">
+                    <li>El endpoint base "https://cataas.com/cat" te regresa una imagen random de un gato</li>
+                    <li>El endpoint "https://cataas.com/cat/gif" te regresa un gif random de un gato </li>
+                </ol>
+            </div>
+
+            <div class="button-container">
+                <button id="load">Imagen</button>
+                <button id="gif">GIF</button>
+            </div>
+
+            <div id="imageContainer" class="framed">
+                <!--Para las imagenes-->>
+            </div>
+    </section>
+
+
+</body>
+<script src="js/api.js"></script>
+<script>
+    //Boton de imagenes
+    load.addEventListener("click", CatImage);
+    //Boton de gifs
+    gif.addEventListener("click", CatGif);
+</script>
