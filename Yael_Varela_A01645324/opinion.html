@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Opinion</title>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Opinion</h2>
+    <p>
+        <a href="/bienvenida"
+            target="_new"
+            class="button">Go to bienvenida</a>
+    </p>
+
+    <img src="https://1000marcas.net/wp-content/uploads/2020/03/Chivas-Logo-2007.png" alt="el campeón">
+    <script>
+        async function obtenerOpinion() {
+          //Agregar el url adecuado
+          const opinion= await fetch("/api/opinion");
+          const jsonLE=await opinion.json();
+          console.log(jsonLE);
+          const parrafo = document.createElement('p');
+          const parrafo2 = document.createElement('p');
+          parrafo.textContent = `Mi Opinión: ${jsonLE.opinion}`;
+          parrafo2.textContent = `Freedombox: ${jsonLE.freebox}`;
+          document.body.appendChild(parrafo);
+          document.body.appendChild(parrafo2);
+        }
+        obtenerOpinion();
+
+    </script>
+</body>
+</html>

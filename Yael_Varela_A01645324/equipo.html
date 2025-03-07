@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Equipo</title>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Equipo</h2>
+    <p>
+        <a href="/bienvenida"
+            target="_new"
+            class="button">Go to bienvenida</a>
+    </p>
+
+    
+    <script>
+        async function obtenerEquipo() {
+            //Agregar el url adecuado
+            const donantes= await fetch("/api/equipo");
+            const jsonLE=await donantes.json();
+            console.log(jsonLE);
+            jsonLE.forEach(element => {
+                 const parrafo = document.createElement('p');
+                 parrafo.textContent = `Nombre: ${element.nombre},   Cualidad: ${element.cualidad}`;
+                 document.body.appendChild(parrafo);
+            });
+        }
+        obtenerEquipo();
+    </script>
+</body>
+</html>

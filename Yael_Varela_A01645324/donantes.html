@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Donantes</title>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Donantes</h2>
+    <p>
+        <a href="/bienvenida"
+            target="_new"
+            class="button">Go to bienvenida</a>
+    </p>
+
+    <p>
+        <a href="/escuelas"
+            target="_new"
+            class="button">Go to escuelas</a>
+    </p>
+    
+    <script>
+        async function obtenerDonantes() {
+            //Agregar el url adecuado
+            const donantes= await fetch("/api/donantes");
+            const jsonLE=await donantes.json();
+            console.log(jsonLE);
+            const parrafo = document.createElement('p');
+            parrafo.textContent = `Nombre: ${jsonLE[0].nombre},     Dirección: ${jsonLE[0].direccion}`;
+            document.body.appendChild(parrafo);
+
+            const parrafo2 = document.createElement('p');
+            parrafo2.textContent = `Nombre: ${jsonLE[1].nombre},    Dirección: ${jsonLE[1].direccion}`;
+            document.body.appendChild(parrafo2);
+        }
+        obtenerDonantes();
+    </script>
+</body>
+</html>
